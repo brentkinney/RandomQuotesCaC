@@ -51,7 +51,7 @@ step "Run a Script" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "false"
-            Octopus.Action.Script.ScriptBody = "Write-Host 'Test Script 1'"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'I made a change to this write-host line in VS Code using CaC.  Neat huh?!!!'"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
@@ -68,7 +68,7 @@ step "Run a Script - clone (1)" {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.RunOnServer = "false"
-            Octopus.Action.Script.ScriptBody = "Write-Host 'Test Script 2'"
+            Octopus.Action.Script.ScriptBody = "Write-Host 'I also changed this line in VS Code using the GitHub extension baby'"
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
