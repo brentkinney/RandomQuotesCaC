@@ -1,3 +1,18 @@
+deployment_changes_template = <<-EOT
+        #{each release in Octopus.Deployment.Changes}
+        **Release #{release.Version}**
+        #{release.ReleaseNotes}
+        #{/each}
+    EOT
+release_notes_template = <<-EOT
+        #{each package in Octopus.Release.Package}
+        - #{package.PackageId} #{package.Version}
+        #{each workItem in package.WorkItems}
+            - [#{workItem.Id}](#{workItem.LinkUrl}) - #{workItem.Description}
+        #{/each}
+        #{/each}
+    EOT
+
 connectivity_policy {
 }
 
